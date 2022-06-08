@@ -14,7 +14,7 @@ router.get('/:dni', getdUser);
 router.get('/name/:name', getNameUser);  
 // se requier check de express-validator  
 router.post('/create',[check('name','el nombre es obligatorio').not().isEmpty(),
-                       check('email','el email es obligatorio').isEmail(),
+                       
                        check('surname','el surname  es obligatorio').not().isEmpty(),
                        check('Username','el username es obligatorio').not().isEmpty(),
                        check('password','la pasword es obligatoria').not().isEmpty(),
