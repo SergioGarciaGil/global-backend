@@ -5,12 +5,12 @@ const router = Router();
 const {getProducts, getProductById, createProduct , getProductByCat, updateProduct,deleteProduct} = require ('../controlers/products/');
 
 
-router.get("/products", getProducts);
-router.get("/products/:id", getProductById);
-router.post("/products", createProduct);
+router.get("/", getProducts);
+router.get("/:id", getProductById);
+router.post("/", createProduct);
 router.get("/categories/:categorie", getProductByCat);
-router.put("/products/:id", updateProduct);
-router.delete("/products/:id",deleteProduct);
+router.put("/:id", updateProduct);
+router.delete("/:id",deleteProduct);
 
 
 module.exports = router;

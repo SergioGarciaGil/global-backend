@@ -1,10 +1,12 @@
 const userSchema = require('../../models/user');
 
-const getIdUser = (req, res) => {
-    const { id } = req.params;
-    userSchema.findById(id)
-
+const getdUser = (req, res) => {
+    const { dni } = req.params;
+    console.log(req.params)
+    userSchema.findOne({_dni : dni})
+      
         .then((data) => {
+            
             res.json(data);//responde con los datos del usuario creado     
         })
         .catch((err) => {
@@ -12,4 +14,4 @@ const getIdUser = (req, res) => {
         });
 }
 
-module.exports = getIdUser;
+module.exports = getdUser;
