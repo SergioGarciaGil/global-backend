@@ -4,6 +4,23 @@
   
 </head>
 <body>
+    <style>
+        div{
+          background-color: aqua;
+          margin-left: 200px;
+          margin-right: 400px;
+        }
+
+        input{
+          margin-left: 100px;
+        }
+        button{
+          margin-left: 400px;
+          margin-top: 20px;
+          background-color: blueviolet;
+        }
+
+    </style>
   
     <div > 
                      
@@ -60,11 +77,12 @@
           <input  type='text' id="phoneNumber" name="phoneNumber" maxlength="30"  placeholder="phoneNumber" />     
           </div>
           </div>
-        
+     
+
          <button >Registrar</button>
        
-  
-      </form>
+        </form> 
+      
 
       <script >
                const $formato=document.querySelector('#formato');
@@ -115,24 +133,24 @@
                    const phoneNumber=formData.get('phoneNumber');
                    $phoneNumber.textContent=phoneNumber
                      }
-      $formato.addEventListener('submit',(e)=>{
-              e.preventDefault();
-            const formData= new FormData(e.currentTarget);
-            renderName(formData);
-            renderSurname(formData);
-             renderUsername(formData);
-            renderpassword(formData);
-             renderEmail(formData);
-             renderDni(formData); 
-            renderAge(formData);
-           renderAddress(formData);
-           renderPhone(formData);
-           fetch('/users/create',{
-              method:'POST',
-               body:formData
-             })
-             e.preventDefault();
-         })
+            $formato.addEventListener('submit',(e)=>{
+                      e.preventDefault();
+                      const formData= new FormData(e.currentTarget);
+                     renderName(formData);
+                      renderSurname(formData);
+                      renderUsername(formData);
+                      renderpassword(formData);
+                       renderEmail(formData);
+                      renderDni(formData); 
+                     renderAge(formData);
+                   renderAddress(formData);
+                    renderPhone(formData);
+                     fetch('/users/create',{
+                           method:'POST',
+                           body:formData
+                         })
+                           
+                     })
         
       </script>
         

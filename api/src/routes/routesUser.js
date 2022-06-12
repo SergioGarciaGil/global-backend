@@ -10,7 +10,7 @@ const loginUser = require('../controllers/user/loginUser');
 const router = express.Router();
 const multer=require('multer');
 const upper=multer({dest : 'controllers/user/createUser'})
-//const logon=multer({dest:'controllers/user/loginUser'})
+const logon=multer({dest:'controllers/user/loginUser'})
 router.get('/', getUser);
 router.get('/:dni', getdUser);
 router.get('/name/:name', getNameUser);  
@@ -29,7 +29,7 @@ router.post('/create', upper.single('formData')
 // ]     
 router.put('/:dni', updateUser);
 router.delete('/delete/:dni', deleteUser);
-router.post('/login',loginUser);
+router.post('/login',logon.single('logData'),loginUser);
 
 
 module.exports = router;

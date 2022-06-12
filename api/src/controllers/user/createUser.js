@@ -7,7 +7,7 @@ const userSchema = require('../../models/user');
 const createUsuario = (req, res) => {
    // console.log(req.body); 
     const errors= validationResult(req);
-   // console.log(errors);
+   // console.log(errors); 
    console.log(req.body);
     //let  {name,surname,email,password,dni,age,address,Username,phoneNumber}=req.body;
      let name=req.body.name;
