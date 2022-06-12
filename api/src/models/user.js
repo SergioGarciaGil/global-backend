@@ -28,7 +28,7 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     dni:{
-        type: Number,
+        type: Number, 
         required: true
 
     },
