@@ -1,27 +1,10 @@
 <!DOCTYPE html>
 <html >
 <head>
-  
+  <link rel="stylesheet"  href="./login.css">
 </head>
 <body>
-    <style>
-        div{
-          background-color: aqua;
-          margin-left: 200px;
-          margin-right: 400px;
-        }
-
-        input{
-          margin-left: 100px;
-        }
-        button{
-          margin-left: 400px;
-          margin-top: 20px;
-          background-color: blueviolet;
-        }
-
-    </style>
-  
+   
     <div > 
                      
         <form action=""     id="formato">
@@ -47,9 +30,13 @@
               
           </div>
           
-          </div>
-        
           <button >Registrar</button>
+
+          <p>
+            <input type="reset" value="Restaurar">
+          </p>
+          </div>
+      
        
       </form>
       
@@ -72,7 +59,7 @@
                    }
             
             $formato.addEventListener('submit',(e)=>{
-                      e.preventDefault();
+                       e.preventDefault();
                       const logData= new FormData(e.currentTarget);
                       renderUsername(logData);
                       renderpassword(logData);
@@ -81,7 +68,7 @@
                            method:'POST',
                            body:logData
                          })
-                           
+                         
                      })
         
       </script>

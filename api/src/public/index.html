@@ -1,26 +1,10 @@
 <!DOCTYPE html>
 <html >
 <head>
-  
+  <link rel="stylesheet"  href="./index.css">
 </head>
 <body>
-    <style>
-        div{
-          background-color: aqua;
-          margin-left: 200px;
-          margin-right: 400px;
-        }
-
-        input{
-          margin-left: 100px;
-        }
-        button{
-          margin-left: 400px;
-          margin-top: 20px;
-          background-color: blueviolet;
-        }
-
-    </style>
+ 
   
     <div > 
                      
@@ -76,10 +60,17 @@
           <label>Numero Telefono:   </label><br>
           <input  type='text' id="phoneNumber" name="phoneNumber" maxlength="30"  placeholder="phoneNumber" />     
           </div>
+          <button >Registrar</button>
+
+
+          <p>
+            <input type="reset" value="Restaurar">
+          </p>
+
           </div>
      
 
-         <button >Registrar</button>
+         
        
         </form> 
       
@@ -134,7 +125,7 @@
                    $phoneNumber.textContent=phoneNumber
                      }
             $formato.addEventListener('submit',(e)=>{
-                      e.preventDefault();
+              e.preventDefault();   
                       const formData= new FormData(e.currentTarget);
                      renderName(formData);
                       renderSurname(formData);
@@ -149,7 +140,7 @@
                            method:'POST',
                            body:formData
                          })
-                           
+                             
                      })
         
       </script>
