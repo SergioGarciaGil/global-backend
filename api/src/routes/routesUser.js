@@ -1,7 +1,7 @@
 const express = require('express');
 const createUser = require('../controllers/user/createUser');
 const updateUser = require('../controllers/user/updateUser');
-const getUser = require('../controllers/user/getUsers');
+const getUser = require('../controllers/user/getUser');
 const getdUser = require('../controllers/user/getdUser');
 const getNameUser = require('../controllers/user/getNameUser');
 const deleteUser = require('../controllers/user/deleteUser');
@@ -32,4 +32,4 @@ router.delete('/delete/:dni', deleteUser);
 router.post('/login',logon.single('logData'),loginUser);
 
 
-module.exports = router;    
+module.exports = router;  
