@@ -32,4 +32,4 @@ router.delete('/delete/:dni', deleteUser);
 router.post('/login',logon.single('logData'),loginUser);
 
 
-module.exports = router;
+module.exports = router;  
